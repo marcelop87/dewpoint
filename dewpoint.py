@@ -7,8 +7,8 @@ st.image('newplot.png')
 loaded_model = load('dp_model.joblib')
 
 with st.form("user_inputs"):
-    presion = st.number_input('Presion barg', min_value=65)
-    temperatura = st.number_input('Temperatura °F', min_value=-22) 
+    presion = st.number_input('Presion barg', min_value=65.0)
+    temperatura = st.number_input('Temperatura °F', min_value=-22.0) 
         
     submitted = st.form_submit_button("Submit")
     if submitted:
