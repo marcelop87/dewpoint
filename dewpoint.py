@@ -13,5 +13,7 @@ with st.form("user_inputs"):
     loaded_model = load('dp_model.joblib')
     nueva_prediccion=loaded_model.predict([[temperatura, presion]])[0]
     
-    st.write(f"Se predice que el Dew Point Calculado es de {nueva_prediccion:.2f}")
-    st.form_submit_button()
+    
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+       st.write(f"Se predice que el Dew Point Calculado es de {nueva_prediccion:.2f}")
