@@ -9,9 +9,9 @@ container = st.container()
 
 @st.cache_data
 def load_data(file):
-    file = pd.read_excel('DP CPF VS TEORICO.xlsx', header=1)
-    file['DP Teorico'] = loaded_model.predict(file[['T Sep Frio', 'P Sep Frio']].values)
-    return file
+    df = pd.read_excel(file, header=1)
+    df['DP Teorico'] = loaded_model.predict(df[['T Sep Frio', 'P Sep Frio']].values)
+    return df
 
 def create_chart(data):
   
