@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 from joblib import load
 
+st.set_option('wideMode' , True)
+
 loaded_model = load('dp_model.joblib')
 
 container = st.container()
