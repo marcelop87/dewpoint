@@ -37,7 +37,7 @@ def main():
         container.write(" # Calculo de Dew Point # ")
         st.write('Esta app usa 2 valores de entrada para predecir el Dew Point')
         with st.form("user_inputs"):
-            presion = st.number_input('Presion barg', min_value=65.0)
+            presion = st.number_input('Presion barg', min_value=60.0)
             temperatura = st.number_input('Temperatura °F', min_value=-22.0) 
                 
             submitted = st.form_submit_button("Submit")
